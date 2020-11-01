@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>task3</title>
+
+<!-- Разработайте модуль, который будет содержать функцию для получения элементов на странице с определенным значением в атрибуте с именем class. Пример использования модуля. var arr = MyQuery.FindClass("redButton"); - возвращает массив элементов с атрибутом class="redButton". -->
+
+<script type="text/javascript"> 
+
+function FindClass() {
+var arr = document.getElementsByClassName("redButton");
+
+for (var i = 0; i < arr.length; i++) {
+    arr[i].style.color = "red";
+ }
+}
+
+</script>
+</head>
+
+<body>
+    <p class="redButton">Hello world!</p>
+    <p>Hello world!</p>
+    <p>Hello world!</p>
+</body>
+</html>

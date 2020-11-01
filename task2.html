@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>task2</title>
+
+<!-- Создайте страницу с кнопкой, при нажатии на кнопке на странице должен создаваться параграф с произвольным текстом. После создания 10 параграфов все они должны быть удалены. -->
+
+<script type="text/javascript">
+
+function createParagraph() {
+var list = document.getElementById("list");
+var item = document.createElement("li");
+item.innerHTML = "Paragraph";
+list.appendChild(item);
+}
+
+function remove() {
+var list = document.getElementById("list");
+for (var i = 0; i <= 10; i++){  //Кнопка удаляет весь список, но выводит больше 10. На 10 не останавливается
+list.remove(list); }
+}
+
+</script>
+
+</head>
+<body>
+    <ol id="list"></ol>
+    <br />
+    
+    <input type="button" onclick="createParagraph()" style="width: 210px;" value="Добавить параграф" /><br />
+    <input type="button" onclick="remove()" style="width: 210px;" value="Удалить все элементы" /><br />
+    
+</body>
+</html>
+

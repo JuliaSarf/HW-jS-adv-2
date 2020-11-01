@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>task1</title>
+
+<!-- Разработайте страницу с произвольным количеством HTML элементов. Создайте модуль, который после загрузки страницы поменяет текст во всех параграфах на PARAGRAPH. Вы должны разработать две версии модуля с использованием объекта в качестве пространства имен и с использованием анонимной функции. -->
+
+<script type="text/javascript">
+
+window.onload = function () {
+            
+var paragraphs = document.getElementsByTagName("p");
+
+for (var i = 0; i < paragraphs.length; i++) {
+paragraphs[i].innerHTML = "PARAGRAPH";
+  
+  }
+}
+</script>
+</head>
+<body>
+    <p>Hello world!!!</p>
+    <p>Hello world!!!</p>
+    <p>Hello world!!!</p>
+    <p>Hello world!!!</p>
+</body>
+</html>

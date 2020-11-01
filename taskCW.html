@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>taskCW</title>
+
+<!-- Создайте страницу, разместите на странице в произвольном порядке несколько параграфов, ссылок и элемент Div с id=test_div. Разместите на странице три кнопки - "выбрать все параграфы", "выбрать все ссылки", "выбрать DIV". При нажатии на каждую кнопку должна запускаться функция обработчик, которая добавит рамку определенного цвета на соответствующие элементы. Сделайте код ненавязчивым. -->
+
+<script type="text/javascript">
+ 
+function SelectParagraphs() {
+
+var par = document.getElementsByTagName("p");
+
+for (var i = 0; i < par.length; i++) {
+    par[i].style.border = "3px solid pink";
+}
+}
+
+function SelectLinks() {
+
+var link = document.getElementsByTagName("a");
+
+for (var i = 0; i < link.length; i++) {
+    link[i].style.border = "3px solid orange";
+}
+}
+
+function SelectDiv() {
+
+var div = document.getElementsByTagName("div");
+
+for (var i = 0; i < div.length; i++) {
+    div[i].style.border = "3px dashed violet";
+}
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="test_div">
+   <p>Hi! How is it going?</p>
+   <p>What is your name?</p>
+   <a id="link" href="https://itvdn.com/ru/video/javascript-essential">ITVDN</a>
+</div>
+
+<input type="button" onclick="SelectParagraphs()" style="width: 210px;" value="Выбрать все параграфы" /><br />
+<input type="button" onclick="SelectLinks()" style="width: 210px;" value="Выбрать все ссылки" /><br />
+<input type="button" onclick="SelectDiv()" style="width: 210px;" value="Выбрать DIV" /><br /> 
+  
+</body>
+</html> 
